@@ -1,6 +1,8 @@
 # 🦕 QuizMania
 
 Quiz sobre dinossauros com sistema de login em PHP.
+Os comentários no código foram adicionados intencionalmente durante o processo de aprendizado, para facilitar o entendimento de cada parte do projeto.
+Eu gosto de entender cada parte, ainda mais que estou reaprendendo algumas coisas.
 
 ## Tecnologias
 - PHP

@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1a3a1a; /*cor de fundo e border só altera a cor do texto*/
+}
+.page{
+    min-height: 100vh;       /* ocupa no mínimo 100% da altura da tela */
+    display: flex;           /* ativa o flexbox */
+    justify-content: center; /* centraliza na horizontal */
+    align-items: center;     /* centraliza na vertical */
+    padding: 2rem;           /* respiro nas bordas em telas pequenas */
+}
+.box{
+    background: #ffffff;       /* fundo branco da caixa */
+    border: 1px solid #0e0b0b; /* borda fina preta pra delimitar a caixa */
+    border-radius: 12px;       /* cantos arredondados */
+    padding: 2rem;             /* espaço interno entre o conteúdo e as bordas */
+    width: 100%;               /* ocupa toda a largura disponível... */
+    max-width: 420px;          /* ...mas nunca passa de 420px (fica largo demais) */
+}
+.box-header { /*cabeçalho da caixa*/
+  margin-bottom: 1.5rem; /* espaço entre o cabeçalho e o primeiro campo */
+}
+.box-header h2 {
+  font-weight: 600;  /* negrito */
+  color: #111;       /* quase preto */
+}
+.form-group { /*label e inputs*/
+  margin-bottom: 1rem; /* espaço entre um campo e o próximo */
+}
+.form-group label, .form-group select{
+  display: block;    /* joga o label em linha própria (sem isso fica do lado do input) */
+  font-size: 14px;   /* levemente menor que o input */
+  font-weight: 500;  /* meio-negrito */
+  color: #555;       /* cinza escuro, mas não preto total */
+  margin-bottom: 6px; /* espaço entre o label e o input abaixo dele */
+}
+input{
+    width: 100%; /*largura*/
+    height: 40px; /* altura fixa pra todos os campos ficarem iguais */
+    padding: 0 12px; /*espaço dentro do campo do texto*/
+    font-size: 14px;  /* tamanho do texto digitado */
+    border: 1px solid green; /*altera tamanho e cor da borda do campo de texto*/
+    border-radius: 8px; /*cantos arrendondados*/
+    outline: none;   /* remove o contorno azul/laranja padrão do navegador */
+    transition: border-color 0.2s, box-shadow 0.2s; /* animação suave ao focar */
+}
+/* Estado de foco: quando o usuário clica no campo */
+.form-group input:focus {
+  border-color: #053b11;                      /* borda fica mais escura */
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.08); /* anel suave ao redor do campo */
+}
+.btn-submit {
+  width: 100%;      /* ocupa toda a largura da caixa */
+  height: 42px;     /* altura do botão */
+  margin-top: 0.5rem;  /* pequeno espaço acima do botão */
+  background: #1a3a1a;    /* fundo escuro (quase preto) */
+  color: #fff;         /* texto branco */
+  border: none;        /* remove a borda padrão do botão */
+  border-radius: 8px;  /* cantos arredondados */
+  font-size: 14px;
+  font-weight: 500; /*negrito*/
+  cursor: pointer;     /* mostra a mãozinha ao passar o mouse */
+  transition: opacity 0.15s; /* animação suave no hover */
+}
+/* Efeito ao passar o mouse por cima */
+.btn-submit:hover {
+  opacity: 0.8; /* fica levemente transparente, dando sensação de clique */
+}
+/* Links extras abaixo do formulário */
+.extra {
+    text-align: center;
+    margin-top: 1.25rem;
+    font-size: 13px;
+    color: #555;
+}
+
+.extra a {
+    color: green;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.extra a:hover {
+    text-decoration: underline;
+}
+/* Progresso */
+.quiz-progresso {
+    color: #a8c5a0;
+    font-size: 13px;
+    margin-bottom: 8px;
+    font-family: sans-serif;
+}
+
+/* Barra de progresso */
+.quiz-barra-fundo {
+    width: 100%;
+    max-width: 420px;
+    height: 6px;
+    background: #2d5a2d;
+    border-radius: 99px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.quiz-barra-preenchida {
+    height: 100%;
+    background: #d4a017;
+    border-radius: 99px;
+    transition: width 0.3s ease;
+}
+
+/* Pergunta */
+.quiz-pergunta {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    max-width: 420px;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-family: sans-serif;
+}
+
+/* Container das opções */
+.quiz-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 420px;
+}
+
+/* Botão de cada opção */
+.quiz-btn {
+    width: 100%;
+    padding: 14px 20px;
+    background: #2d5a2d;
+    color: #ffffff;
+    border: 1px solid #3d7a3d;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s, transform 0.1s;
+    font-family: sans-serif;
+}
+
+.quiz-btn:hover {
+    background: #3d7a3d;
+    transform: scale(1.01);
+}

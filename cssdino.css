@@ -1,0 +1,97 @@
+/* ================================
+   INDEX — página inicial do quiz
+   ================================ */
+
+.index-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;   /* empilha os elementos verticalmente */
+    justify-content: center;  /* centraliza na vertical */
+    align-items: center;      /* centraliza na horizontal */
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a3a1a; /* verde escuro — clima de selva */
+}
+
+/* Dinossauro grande como ilustração */
+.dino-ilustracao {
+    font-size: 100px;          /* emoji gigante */
+    margin-bottom: 1rem;
+    animation: balanco 2s ease-in-out infinite; /* animação suave */
+}
+
+/* Animação de balanço no dino */
+@keyframes balanco {
+    0%   { transform: rotate(-5deg); }
+    50%  { transform: rotate(5deg);  }
+    100% { transform: rotate(-5deg); }
+}
+
+.index-titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d4a017;            /* dourado/terra — cor jurássica */
+    margin-bottom: 0.75rem;
+}
+
+.index-sub {
+    font-size: 18px;
+    color: #a8c5a0;            /* verde claro — como folhagem */
+    max-width: 400px;          /* limita a largura do texto */
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Container dos botões lado a lado */
+.index-botoes {
+    display: flex;
+    gap: 1rem;                 /* espaço entre os botões */
+    flex-wrap: wrap;           /* se a tela for pequena, quebra pra baixo */
+    justify-content: center;
+}
+
+/* Estilo base dos dois botões */
+.btn-dino {
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;     /* remove sublinhado do link */
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-dino:hover {
+    opacity: 0.85;
+    transform: scale(1.03);    /* cresce levemente no hover */
+}
+
+/* Botão principal — Criar conta */
+.btn-primario {
+    background-color: #d4a017; /* dourado */
+    color: #1a3a1a;            /* texto verde escuro no fundo dourado */
+    border: none;
+}
+
+/* Botão secundário — Já tenho conta */
+.btn-secundario {
+    background-color: transparent;
+    color: #d4a017;            /* dourado */
+    border: 2px solid #d4a017; /* só a borda dourada */
+}
+/* Link de sair na home */
+.link-sair {
+    margin-top: 1.5rem;
+    font-size: 13px;
+    color: #a8c5a0;
+    text-decoration: none;
+    padding: 8px 20px;
+    border: 1px solid #3d7a3d;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.link-sair:hover {
+    background: #2d5a2d;
+    color: #ffffff;
+}
